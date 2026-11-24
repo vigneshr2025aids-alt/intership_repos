@@ -1,0 +1,40 @@
+REACT
+
+* Javascript library used to build ui
+* Single page application (SPA) [Only one HTML paga is recieved and all the pages are recieved at once, so it might load the html once, but never reloads inside courtesy of everything being downloaded already]
+* Multi Page Application: Client sends request and recieves a HTML page as response
+* React uses component based architecture: re use components anywhere
+
+
+REACT USES VDOM (Virtual DOM): //Document Object Model: Tree like representation of HTML page
+
+HTML --> head
+--> body --> li
+
+virtual representation of real DOM in memory, compare the virtual DOM wrt changes and then ultimately change the actual DOM 
+*React: .jsx (Javascript), .tsx(typescript)
+
+Working:
+
+index.html -> main.jsx -> App.jsx
+
+Reach has two types of components: (1) CLASS COMPONENT (2) FUNCTIONAL COMPONENT // Every file is a .jsx extension and returns a HTML 
+
+PROPS stands for properties
+
+
+Props used to pass data fromone component to another component
+
+XSS --> Cross Site Scripting
+
+Created using cross edge scripting
+
+1. Stored XSS --> Script and store in database
+2. Reflected XSS
+3. DOM XSS
+
+Why needed: While handing out forms, hackers may use it as a gateway to inject malicious contents and to avoid that we use XSS, which is available in frameworks and react which is NOT available in HTML
+
+
+Single element --> Box Model
+Single row/ Column of multiple of elements --> Display Flux

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safe Message Form</title>
+</head>
+<body>
+  <main>
+    <h1>Send a message</h1>
+    <form id="message-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" maxlength="100" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" maxlength="1000" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <section id="result" hidden aria-live="polite">
+      <h2>Submitted message</h2>
+      <p id="result-name"></p>
+      <p id="result-message"></p>
+    </section>
+  </main>
+  <script>
+    const form = document.querySelector("#message-form");
+    const result = document.querySelector("#result");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.querySelector("#result-name").textContent =
+        `Name: ${form.elements.name.value}`;
+      document.querySelector("#result-message").textContent =
+        `Message: ${form.elements.message.value}`;
+      result.hidden = false;
+    });
+  </script>
+</body>
+</html>
