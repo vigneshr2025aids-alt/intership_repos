@@ -1,10 +1,5 @@
-import React from 'react'
+import Count from '../hooks/Count.jsx'
 
-const App = () => { 
-  //Javascfipt code here, before return
-  return (
-    <div>App</div>
-  )
-}
+const App = () => <Count />
 
 export default App
