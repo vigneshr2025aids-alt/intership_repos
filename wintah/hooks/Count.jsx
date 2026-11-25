@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 
 const Count = () => {
   const [count, setCount] = useState(0)
-
+  const [isVisible,setIsVisible]=useState(true)
   return (
     <main className="flex min-h-screen flex-col items-start gap-5 p-6 text-left">
       <p className="text-4xl leading-tight">Count:{count}</p>
@@ -19,10 +19,12 @@ const Count = () => {
           variant="destructive"
           size="lg"
           className="h-16 px-6 text-3xl"
-          onClick={() => setCount(0)}
+          onClick={() => setCount(count-1)}
         >
           Delete
         </Button>
+        <Button variant="destructive" size="lg"
+          className="h-16 px-6 text-3xl" onClick={()=>setCount(0)}>Reset</Button>
         <Button variant="outline" size="lg" className="h-16 px-6 text-3xl">
           Outline
         </Button>
@@ -32,6 +34,12 @@ const Count = () => {
         <Button variant="ghost" size="lg" className="h-16 px-6 text-3xl">
           Ghost
         </Button>
+        <Button onClick={()=>setIsVisible(!isVisible)}>TOGGLE</Button>
+        {isVisible &&(
+            <p>
+           Hello User     
+            </p>
+        )}
       </div>
       <p className="text-4xl leading-tight">This is test</p>
       <p className="text-4xl leading-tight">Students</p>
