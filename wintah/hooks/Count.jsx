@@ -4,8 +4,12 @@ import { Button } from '@/components/ui/button'
 const Count = () => {
   const [count, setCount] = useState(0)
   const [isVisible,setIsVisible]=useState(true)
+  useEffect(()=>{
+    console.log("From useEffect");
+  },[])
+
   return (
-    <main className="flex min-h-screen flex-col items-start gap-5 p-6 text-left">
+    <main className="flex flex-col items-start gap-5 p-6 text-left">
       <p className="text-4xl leading-tight">Count:{count}</p>
       <Button
         size="lg"

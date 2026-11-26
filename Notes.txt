@@ -1,0 +1,157 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         MERN
+
+HTTP REQUEST
+
+GET ----> READ THE DATA
+POST ---> CREATE A NEW DATA
+PUT ---->EDIT THE DATA OR REPLACE THE DATA
+PATCH ---->EDIT THE A PART OF DATA
+DELETE --->DELETE DATA
+
+HTTP HYPER TEXT TRANSEFER PROTOCOL   ----->  UNENCRYPTED CONNECTION
+HTTPS
+SECURE BY UNENCRYPTED CONNECTION USING TLS [TRANSFER LAYER SERCUITY]
+
+
+JAVASCRIPT
+	CHROME V8 ENGINE
+	SINGLE THREADED , SYNCHRONUS LANGNAGE
+
+
+variables
+ var ---> can redeclare , reassign , global scope
+ let ---> can reassign , can't redeclare , block scope
+ const ---> can't redeclare, can't reassign , block scope
+
+
+DATA TYPE      non-primitive --->deep copy
+	       primitive ----> shallow copy
+	
+		object ={ name:"  or  ", age : 40}   ----> JSON
+ number
+ string
+ Boolean
+ null
+ undefined
+ 
+===  -----> check both datatype and value
+
+
+FUNCTION
+
+function_name parameters (a,b){
+	return a+b;
+}
+
+
+ARROW FUNCTION --->
+ 
+
+Const add =(a,b,c)=>{
+	return a+b+c;
+}
+	
+	or
+const add=(a,b,c)=> a+b+c
+
+
+
+
+ES6+ [Ecma script]
+
+ARRAY ----> store Value of Different DataType in contiguous memory
+
+Methods ----> Map, Filter,
+
+CallBack ----> function passed as an argument to Another function
+
+
+PROMISES
+ 
+IT IS AN OBJECT WHICH WILL EXIST IN FUTURE
+
+   PENDING ---> INITIAL STATE
+   RESOLVE [FULFILLED] ----> IF SUCCESS
+   REJECT ---->IF PROMISES FAILED
+
+
+ASYNC/ AWAIT
+
+creating a asynchronous function using async keyword
+
+await ---> wait until promises get complete fetching the details
+
+React ----> javascript library used to build  UI  ,
+as
+Single page application [SPA] ----> only lone html page sent as a response from server
+
+Multiple page application ---> will reload everytime
+
+VDOM ----> virtual DOM
+DOM ---> Document object Model
+tree like representation of HTML page
+Reconcilation ----> compare with old DOM change only necessary Part
+
+
+
+
+
+
+ npm create vite@latest
+
+
+
+jsx ---> JAVA script X HTML
+
+contains javascript function which will return HTML
+
+working
+      index.html  ----->    main jsx <id=root>
+
+
+two types of component
+
+	1. class component
+	2. functional component ---->uses json [recently using] function which return html
+
+
+
+Props stands for Properties
+
+----> Props Used To Pass data From One Component to Another Component
+----> Can't Modify Props In Child Component
+
+
+
+
+XSS  ---> Cross Site Scripting
+
+Stored XSS
+Reflected XSS
+DOM XSS
+ 
+
+Spread Operator 
+
+arr1=[1 , 2 , 3] 
+
+
+Life of React 
+
+mounting --->Initial render / elements added to DOM
+upadating ----> UI change due to state or prop update
+unmounting ---> Removing form DOM 
+
+
+useEffect Hook
+syntax : 
+    useEffect(()=>{
+        //function
+        return ---> clean Up 
+    }, []//depencdency array (optional))
+
+if we don't use it it will work in everywhere 
+empty --->works only on initial render  
+non-empty ----> works whenever state update 
+
+ 
