@@ -42,15 +42,15 @@ export const Register = () => {
     <div>
         
         <form onSubmit={handleSubmit}>   
-            <label htmlForm="name">Enter Your Name : </label>
+            <label htmlFor="name">Enter Your Name : </label>
             <input type="text" name="name" onChange=
             {handleChange} value={formData.name}/>
             <br />
-            <label htmlForm="email">Enter Your Email : </label>
+            <label htmlFor="email">Enter Your Email : </label>
             <input type="email" name="email" onChange=
             {handleChange} value={formData.email}/>
             <br />
-            <label htmlForm="password">Enter Your password : </label>
+            <label htmlFor="password">Enter Your password : </label>
             <input type="text" name="password" onChange=
             {handleChange} value={formData.password}/>
             <br />
